@@ -98,11 +98,13 @@ The window should then look like this...
 
 ![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/b3782dc7-48bf-41bc-84d8-9d92a71bb2df)
 
+Go ahead and hit create.
+
 From there hit create pull request. You will now see a window that looks like this below...
 
 ![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/c024cf79-ed5a-430a-914f-9a1239c63180)
 
-Wow! That is very blank. **This is not good practice.** Go ahead and hit create anyways. 
+Wow! That is very blank. **This is not good practice.**  
 
 You now have a blank PR!
 
