@@ -145,3 +145,11 @@ Isn't that a lot better?
 That is it for this part!
 
 # Part 3 - Conflicts, Mistakes, Regrets
+
+In this part we will cover merge conflicts and how to revert a commit. 
+
+**Step 1:** Checkout the `part3` branch and try to run the dino game like we did in part 2. Has something changed?
+
+**Step 2:** Make a pull request to merge the `part3` branch into `main`. Once its created you should now see a warning that there is merge conflicts! Oh no!
+
+**Step 3:** Click on "Resolve Conflicts"
