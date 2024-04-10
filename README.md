@@ -84,4 +84,64 @@ If you don't have a terminal open then you can select the View dropdown and sele
 
 `python chromedino.py`
 
+If you got your game to run then great! Now it is time to make a pull request.
+
+**Step 4:** Go onto GitHub on the web to your fork and create a pull request. Under the pull requests tab you can make a new pull request. 
+
+**Make sure to switch the base off of the main repository and onto your forked one**
+
+The window should then look like this...
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/b3782dc7-48bf-41bc-84d8-9d92a71bb2df)
+
+From there hit create pull request. You will now see a window that looks like this below...
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/c024cf79-ed5a-430a-914f-9a1239c63180)
+
+Wow! That is very blank. **This is not good practice.** Go ahead and hit create anyways. 
+
+You now have a blank PR!
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/aea29b38-fe27-40e0-a36b-a376f667c660)
+
+When you make a pull request you want it to be descriptive as to what you are adding and the code changes made. In the next steps we will learn how to make a *pull request template* that will help to organize this information. 
+
+**Step 5:** Delete this blank pull request by hitting the "Close pull request" button at the bottom of the screen. It won't remove it from the git history so you won't have a spotless repository but that is ok we are still learning!
+
+**Step 6:** Hop back into vscode on the part 2 branch and create the following folder in the root directory `.github`. This is where we will store our template. GitHub knows to look in this folder. 
+
+**Step 7:** Create a file `pull_request_template.md` and add the following text inside. 
+
+```md
+## Description
+description of pull request
+
+## Summary of issue/feature
+Issue summary
+
+## Code Changes
+*
+*
+*
+
+## PR Checklist
+- [ ] Tests added/updated
+- [ ] Build completed/ Tests passed locally
+- [ ] Issue linked in PR and commit messages (#issue)
+```
+
+There are other types of templates you can add to this folder such as if you are using GitHub issues which we won't get into in this activity but they are all written in a language called Markdown. You may already be familliar with it. 
+
+This template features a few nice things that can help you keep track of code changes and give reviewers a better idea of what they are looking at and the changes purpose. 
+
+A lot of this doesn't apply to what we are doing in this activity but is very nice to utilize in your personal projects and you will absolutely see something very similar if you ever go into industry as a software developer.
+
+**Step 8:** Commit this file to your part2 branch and try to make a pull request again. You should now see your lovely template. Fill it out with what information you think is relevant or just throw a nice meme in there and create your PR. 
+
+Isn't that a lot better?
+
+**Step 9:** If GitHub gives you the green light to merge into main then go ahead and do so.
+
+That is it for this part!
+
 # Part 3 - Conflicts, Mistakes, Regrets
