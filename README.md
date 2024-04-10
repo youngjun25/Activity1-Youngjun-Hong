@@ -84,11 +84,15 @@ If you don't have a terminal open then you can select the View dropdown and sele
 
 `python chromedino.py`
 
-If you got your game to run then great! Now it is time to make a pull request.
+If you got your game to run then great! Make sure to push on github desktop otherwise your changes won't show up on the web. 
+
+Now it is time to make a pull request.
 
 **Step 4:** Go onto GitHub on the web to your fork and create a pull request. Under the pull requests tab you can make a new pull request. 
 
 **Make sure to switch the base off of the main repository and onto your forked one**
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/aea29b38-fe27-40e0-a36b-a376f667c660)
 
 The window should then look like this...
 
@@ -101,8 +105,6 @@ From there hit create pull request. You will now see a window that looks like th
 Wow! That is very blank. **This is not good practice.** Go ahead and hit create anyways. 
 
 You now have a blank PR!
-
-![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/aea29b38-fe27-40e0-a36b-a376f667c660)
 
 When you make a pull request you want it to be descriptive as to what you are adding and the code changes made. In the next steps we will learn how to make a *pull request template* that will help to organize this information. 
 
