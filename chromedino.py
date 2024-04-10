@@ -159,9 +159,11 @@ class Cloud:
 
 class Obstacle:
     def __init__(self, image, type):
-        self.image = image.convert_alpha()  # Ensure the image supports transparency
-        # Apply a green overlay
-        self.image.fill((0, 255, 0, 128), special_flags=pygame.BLEND_RGBA_MULT)
+        # Ensure each image supports transparency
+        self.image = [img.convert_alpha() for img in image]
+        for img in self.image:
+            # Apply a green overlay to each image
+            img.fill((0, 255, 0, 128), special_flags=pygame.BLEND_RGBA_MULT)
         self.type = type
         self.rect = self.image[self.type].get_rect()
         self.rect.x = SCREEN_WIDTH
