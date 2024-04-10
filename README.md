@@ -152,4 +152,58 @@ In this part we will cover merge conflicts and how to revert a commit.
 
 **Step 2:** Make a pull request to merge the `part3` branch into `main`. Once its created you should now see a warning that there is merge conflicts! Oh no!
 
-**Step 3:** Click on "Resolve Conflicts"
+**Step 3:** Click on "Resolve Conflicts". You will then be brought to the conflicts editor. Below is an example of what a single line conflict looks like in the `.gitignore` file.
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/4dbb272b-8cca-4e69-9525-3ded611392ad)
+
+On the top half above the ====== Will be the change from the branch specified. In this example its `part2`. On the bottom will be what the branch you are merging into has. In order to resolve these conflicts you will need to delete one version or the other and take out the separators. That means........
+
+If you want to keep the code from `whatever branch` Remove the...   
+```>>>>>>>>> whatever branch
+=================
+
+>>>>>>>>>>> whatever other branch
+```
+But keep the  
+`*bat`
+
+So the resulting window would look like this...  
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/f0d4b668-ccc9-4619-ae8b-6c4b89925323)
+
+You can now see that nothing is highlighted which means the conflicts are resolved. 
+
+Now that you have an idea go ahead and resolve the conflicts. In this case we want to...........
+
+- Reject the screen width and height changes
+- Remove the fullscreen parameter
+- Reject the window height and ground height
+- Keep the dinosaur red
+- Keep the clouds blue
+- Reject the changes to Obstical but make sure the rbg values still apply (This option will be a blend of both keeping stuff from `main` and keeping stuff from `part3`
+
+This means when you end up running the game you shouldn't be able to play forever without jumping. The obsticals should stay on the ground. 
+
+Once you are happy with the state of affairs and there are no more highlights then you can go ahead and resolve conflicts. 
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/32e114ea-a08f-4ddc-a9a0-605c2f976d8a)
+
+**Step 4:** Now we still have an issue. Our cactus's are all dead and yellow. We want them to be green! To fix this we are going to revert a commit. 
+
+Look at the commit history on main. You can do this by clicking on commits. 
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/2e7c8065-c480-4308-aeb9-521b30e0a64a)
+
+You should see this sus commit. 
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/674eb766-6f45-4934-b79b-061aba126297)
+
+Go ahead and copy the id. 
+
+**Step 5:** In order to revert this commit go into vscode and run the following command `git revert the_id_you_copied`. 
+
+This may cause more merge conflicts that you have to resolve or entirely break everything. Who konws! 
+
+Once you get this far let me know! But if all goes well you should be able to commit and push the revert. Re-run the game and your cactus should be green!
+
+
