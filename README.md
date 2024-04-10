@@ -84,4 +84,130 @@ If you don't have a terminal open then you can select the View dropdown and sele
 
 `python chromedino.py`
 
+If you got your game to run then great! Make sure to push on github desktop otherwise your changes won't show up on the web. 
+
+Now it is time to make a pull request.
+
+**Step 4:** Go onto GitHub on the web to your fork and create a pull request. Under the pull requests tab you can make a new pull request. 
+
+**Make sure to switch the base off of the main repository and onto your forked one**
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/aea29b38-fe27-40e0-a36b-a376f667c660)
+
+The window should then look like this...
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/b3782dc7-48bf-41bc-84d8-9d92a71bb2df)
+
+Go ahead and hit create.
+
+From there hit create pull request. You will now see a window that looks like this below...
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/c024cf79-ed5a-430a-914f-9a1239c63180)
+
+Wow! That is very blank. **This is not good practice.**  
+
+You now have a blank PR!
+
+When you make a pull request you want it to be descriptive as to what you are adding and the code changes made. In the next steps we will learn how to make a *pull request template* that will help to organize this information. 
+
+**Step 5:** Delete this blank pull request by hitting the "Close pull request" button at the bottom of the screen. It won't remove it from the git history so you won't have a spotless repository but that is ok we are still learning!
+
+**Step 6:** Hop back into vscode on the part 2 branch and create the following folder in the root directory `.github`. This is where we will store our template. GitHub knows to look in this folder. 
+
+**Step 7:** Create a file `pull_request_template.md` and add the following text inside. 
+
+```md
+## Description
+description of pull request
+
+## Summary of issue/feature
+Issue summary
+
+## Code Changes
+*
+*
+*
+
+## PR Checklist
+- [ ] Tests added/updated
+- [ ] Build completed/ Tests passed locally
+- [ ] Issue linked in PR and commit messages (#issue)
+```
+
+There are other types of templates you can add to this folder such as if you are using GitHub issues which we won't get into in this activity but they are all written in a language called Markdown. You may already be familliar with it. 
+
+This template features a few nice things that can help you keep track of code changes and give reviewers a better idea of what they are looking at and the changes purpose. 
+
+A lot of this doesn't apply to what we are doing in this activity but is very nice to utilize in your personal projects and you will absolutely see something very similar if you ever go into industry as a software developer.
+
+**Step 8:** Commit this file to your part2 branch and try to make a pull request again. You should now see your lovely template. Fill it out with what information you think is relevant or just throw a nice meme in there and create your PR. 
+
+Isn't that a lot better?
+
+**Step 9:** If GitHub gives you the green light to merge into main then go ahead and do so.
+
+That is it for this part!
+
 # Part 3 - Conflicts, Mistakes, Regrets
+
+In this part we will cover merge conflicts and how to revert a commit. 
+
+**Step 1:** Checkout the `part3` branch and try to run the dino game like we did in part 2. Has something changed?
+
+**Step 2:** Make a pull request to merge the `part3` branch into `main`. Once its created you should now see a warning that there is merge conflicts! Oh no!
+
+**Step 3:** Click on "Resolve Conflicts". You will then be brought to the conflicts editor. Below is an example of what a single line conflict looks like in the `.gitignore` file.
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/4dbb272b-8cca-4e69-9525-3ded611392ad)
+
+On the top half above the ====== Will be the change from the branch specified. In this example its `part2`. On the bottom will be what the branch you are merging into has. In order to resolve these conflicts you will need to delete one version or the other and take out the separators. That means........
+
+If you want to keep the code from `whatever branch` Remove the...   
+```>>>>>>>>> whatever branch
+=================
+
+>>>>>>>>>>> whatever other branch
+```
+But keep the  
+`*bat`
+
+So the resulting window would look like this...  
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/f0d4b668-ccc9-4619-ae8b-6c4b89925323)
+
+You can now see that nothing is highlighted which means the conflicts are resolved. 
+
+Now that you have an idea go ahead and resolve the conflicts. In this case we want to...........
+
+- Reject the screen width and height changes
+- Remove the fullscreen parameter
+- Reject the window height and ground height
+- Keep the dinosaur red
+- Keep the clouds blue
+- Reject the changes to Obstical but make sure the rbg values still apply (This option will be a blend of both keeping stuff from `main` and keeping stuff from `part3`
+
+This means when you end up running the game you shouldn't be able to play forever without jumping. The obsticals should stay on the ground. 
+
+Once you are happy with the state of affairs and there are no more highlights then you can go ahead and resolve conflicts. 
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/32e114ea-a08f-4ddc-a9a0-605c2f976d8a)
+
+**Step 4:** Now we still have an issue. Our cactus's are all dead and yellow. We want them to be green! To fix this we are going to revert a commit. 
+
+Look at the commit history on main. You can do this by clicking on commits. 
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/2e7c8065-c480-4308-aeb9-521b30e0a64a)
+
+You should see this sus commit. 
+
+![image](https://github.com/Madeline-Ellingson/CIS496-GitActivity/assets/93016306/674eb766-6f45-4934-b79b-061aba126297)
+
+Go ahead and copy the id. 
+
+**Step 5:** In order to revert this commit go into vscode and run the following command `git revert the_id_you_copied`. 
+
+This may cause more merge conflicts that you have to resolve or entirely break everything. Who konws! 
+
+Once you get this far let me know! But if all goes well you should be able to commit and push the revert. Re-run the game and your cactus should be green!
+
+
