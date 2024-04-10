@@ -163,7 +163,7 @@ class Obstacle:
         self.image = [img.convert_alpha() for img in image]
         for img in self.image:
             # Apply a green overlay to each image
-            img.fill((255, 255, 0, 128), special_flags=pygame.BLEND_RGBA_MULT)
+            img.fill((0, 255, 0, 128), special_flags=pygame.BLEND_RGBA_MULT)
         self.type = type
         self.rect = self.image[self.type].get_rect()
         self.rect.x = SCREEN_WIDTH
